@@ -1,9 +1,20 @@
-
+// detecting button press
 var numOfDrumButtons = document.querySelectorAll(".drum").length
 for (var i = 0;i<numOfDrumButtons; i++){
     document.querySelectorAll(".drum")[i].addEventListener("click",function (){
       var buttonInnerHTML = this.innerHTML;
-        switch (buttonInnerHTML) {
+      
+      makeSound(buttonInnerHTML);
+    });
+}
+
+// detecting keyboard press
+document.addEventListener("keypress", function(event){
+   makeSound(event.key);
+})
+
+function makeSound(key){
+    switch (key) {
         case "w":
             var tom_1 = new Audio("sounds/tom-1.mp3");
             tom_1.play();
@@ -29,7 +40,7 @@ for (var i = 0;i<numOfDrumButtons; i++){
             crash.play();
             break; 
         case "l":
-            var k_bass = new Audio("sounds/kick-bass.mp3");
+            var k_bass = new Audio("sounds\kick-bass.mp3");
             kick-bass.play();
             break; 
 
@@ -37,7 +48,6 @@ for (var i = 0;i<numOfDrumButtons; i++){
             console.log(innerHTML);
             break;
       } 
-    });
 }
 
 
