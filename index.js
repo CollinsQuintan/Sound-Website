@@ -8,7 +8,7 @@ for (var i = 0;i<numOfDrumButtons; i++){
             var tom_1 = new Audio("sounds/tom-1.mp3");
             tom_1.play();
             break;
-        case "s":
+        case "a":
             var tom_2 = new Audio("sounds/tom-2.mp3");
             tom_2.play();
             break;
@@ -29,7 +29,7 @@ for (var i = 0;i<numOfDrumButtons; i++){
             crash.play();
             break; 
         case "l":
-            var kick_bass = new Audio("sounds/kick-bass.mp3");
+            var k_bass = new Audio("sounds/kick-bass.mp3");
             kick-bass.play();
             break; 
 
